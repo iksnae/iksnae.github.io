@@ -28,6 +28,6 @@ I opened the "About Flash" link to the Flash Player product page and started my 
 
 ... TBD
 
-### Back to Designer :) 
+### Back to Animator
 
 ... TBD
