@@ -1,0 +1,66 @@
+---
+layout: post
+title: building a reusable 2D mouth
+date: 2023-02-22 04:57:00.000000000 -08:00
+type: post
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories:
+- Animation
+tags:
+- 2D
+- blender
+- geometry-nodes
+meta:
+  _thumbnail_id: '704'
+  _edit_last: '1'
+  _hitmag_layout_meta: th-default-layout
+  enclosure: |
+    https://iksnae.com/wp-content/uploads/2023/02/mouth-circle.mp4
+    2073114
+    video/mp4
+author:
+  login: user
+  email: user@example.com
+  display_name: user
+  first_name: K
+  last_name: Mills
+permalink: "/2023/02/22/building-a-reusable-2d-mouth/"
+---
+<p><!-- wp:paragraph --></p>
+<p>Over the last couple of weeks, I've been working on rigging 2D characters, specifically eyes and mouths. After countless experiments, I think I've landed on what I believe to be the best solution for my needs.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Since I'm focused on 2D animation, I started building a lot of mouths using the grease pencil. Initially, I went down the path of having frames for each phoneme and used a frame modifier to change which mouth was showing. This approach works in most cases, but requires drawing new mouths when you need something more custom. For example, a character can say the same thing but convey different emotions, which would require many more mouths to draw. Therefore, the idea of having a rigged animatable mouth provides a lot of benefits, but how?</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Again, I started with the grease pencil and tried multiple techniques of adding armatures, setting up control and bendy deform bones, and then setting up vertex groups to bind the vector art to the deforming bones. I came up with a solution that seemed to provide the flexibility I sought, but it was tedious to set up, and I didn't see a way for it to scale.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Fortunately, I stumbled upon a YouTube post where someone was using geometry nodes to procedurally generate a mouth with teeth and a tongue. It was amazing; no armatures were needed, and it was being rendered in a texture. The last part was impressive, but not quite the direction I wanted to go. I really like the idea of using geometry nodes and started exploring how to model the mouth using curves.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>Since this was my first time using geometry nodes, I had to learn how to use it along the way. I began by figuring out how to draw curves in the scene and continued to iterate from there by experimenting. I landed on using the quadratic bezier curve as a building block. The plan is to use four bezier curves to form the mouth shape, beginning with the first curve. I added additional circle meshes to visualize the curve handles.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>i started first with figuring out how to draw curves in the scene and continued to iterate from there by experimenting. i landed on using the quadratic bezier curve as a building block. the plan is to use 4 bezier curves to form the mouth shape, beginning with the first curve. i added additional circle meshes to visualize the curve handles</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:image {"id":705,"sizeSlug":"large","linkDestination":"none"} --></p>
+<figure class="wp-block-image size-large"><img src="{{ site.baseurl }}/assets/2023/02/Screenshot-2023-02-21-at-7.27.35-PM-1024x640.png" alt="" class="wp-image-705" /><br />
+<figcaption class="wp-element-caption">top left quadrant of the mouth shape with 3 control points visualized</figcaption>
+</figure>
+<p><!-- /wp:image --></p>
+<p><!-- wp:video {"id":706} --></p>
+<figure class="wp-block-video"><video controls src="https://iksnae.com/wp-content/uploads/2023/02/mouth-segment.mp4"></video></figure>
+<p><!-- /wp:video --></p>
+<p><!-- wp:paragraph --></p>
+<p>Then I repeated the process three more times.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:video {"id":707} --></p>
+<figure class="wp-block-video"><video controls src="https://iksnae.com/wp-content/uploads/2023/02/mouth-circle.mp4"></video></figure>
+<p><!-- /wp:video --></p>
+<p><!-- wp:paragraph --></p>
+<p>It's still early, but this shape provides a base for mouth and tongue shapes.</p>
+<p><!-- /wp:paragraph --></p>

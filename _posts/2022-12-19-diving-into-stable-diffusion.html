@@ -1,0 +1,158 @@
+---
+layout: post
+title: diving into Stable Diffusion
+date: 2022-12-19 05:48:58.000000000 -08:00
+type: post
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories:
+- AI
+- Animation
+- illustration
+- Video
+tags:
+- AI
+- Raekwon
+- stable-diffusion
+meta:
+  _thumbnail_id: '603'
+  _edit_last: '1'
+  _hitmag_layout_meta: th-default-layout
+  enclosure: |
+    https://iksnae.com/wp-content/uploads/2022/12/raekwon-generated-class-images.mov
+    2801327
+    video/quicktime
+author:
+  login: user
+  email: user@example.com
+  display_name: user
+  first_name: K
+  last_name: Mills
+permalink: "/2022/12/19/diving-into-stable-diffusion/"
+excerpt: Raekwon the Chef of Wu Tang Clan
+---
+<p><!-- wp:paragraph --></p>
+<p>last weekend i took my first look at generative AI and have since been inspired. in this journey one of my new favorite technologies is Stable Diffusion. To not get to deep it enables generation of art very similar to DALL-E and the like. </p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>after playing around with a handful of tools built that allowed me to experiment. experiment i did. since then i've actually generated thousands of examples, but when i tried to draw <a href="https://en.wikipedia.org/wiki/Raekwon">Raekwon</a> from <a href="https://en.wikipedia.org/wiki/Wu-Tang_Clan" data-type="URL" data-id="https://en.wikipedia.org/wiki/Wu-Tang_Clan">Wu Tang Clan</a>, i found that like many others, stable-diffusion didn't really know Raekwon enough to produce anything decent.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>i saw this as opportunity to learn about training custom models based on existing models. in this case it's stable-diffusion-1.5 (checkpoint).. the goal is to train the model to draw Raekwon. </p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>12+ hours later and i'm still waiting for the training to finish..  i provided 30 example images and started a training, instructing it to create 10x the number of sample images (300) for the training data. </p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>the process is brutally slow even on my M1Max but i'm very impressed so far. </p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>i created this video to show the frames so far (84%) into a video and decided to post it here.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:video {"id":596} --></p>
+<figure class="wp-block-video"><video autoplay controls loop muted src="https://iksnae.com/wp-content/uploads/2022/12/rae-training-64-perc.mov" playsinline></video><br />
+<figcaption class="wp-element-caption">drawings generated during training process</figcaption>
+</figure>
+<p><!-- /wp:video --></p>
+<p><!-- wp:paragraph --></p>
+<p>i still think it has a way to go but it's interesting to watch it work.. </p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>here's one of the better results, but still not quite right</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:image {"id":600,"sizeSlug":"full","linkDestination":"none"} --></p>
+<figure class="wp-block-image size-full"><img src="{{ site.baseurl }}/assets/2022/12/61-56392435f336af3805a39d181f626779d68965f8.jpg" alt="" class="wp-image-600" /><br />
+<figcaption class="wp-element-caption">a meh example </figcaption>
+</figure>
+<p><!-- /wp:image --></p>
+<p><!-- wp:paragraph --></p>
+<p>update: ok.. the first phase seems to be complete. we have 300 new (class) images, but now it's running the actual training which will require 2500 steps.. as stated, i'm figuring this out and learning as i go, but was very happy to see the web ui was able reload the params for training. </p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p>while that continues over next 3 hours or more (we'll see) i'm posting the training images i provided as a source using Dreambooth via Stable Diffusion Web UI.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:gallery {"linkTo":"none"} --></p>
+<figure class="wp-block-gallery has-nested-images columns-default is-cropped"><!-- wp:image {"id":610,"sizeSlug":"large","linkDestination":"none"} --></p>
+<figure class="wp-block-image size-large"><img src="{{ site.baseurl }}/assets/2022/12/Untitled-26utih.png.png" alt="" class="wp-image-610" /></figure>
+<p><!-- /wp:image --></p>
+<p><!-- wp:image {"id":609,"sizeSlug":"large","linkDestination":"none"} --></p>
+<figure class="wp-block-image size-large"><img src="{{ site.baseurl }}/assets/2022/12/Untitled-245.png.png" alt="" class="wp-image-609" /></figure>
+<p><!-- /wp:image --></p>
+<p><!-- wp:image {"id":613,"sizeSlug":"large","linkDestination":"none"} --></p>
+<figure class="wp-block-image size-large"><img src="{{ site.baseurl }}/assets/2022/12/Untitled-23425.png.png" alt="" class="wp-image-613" /></figure>
+<p><!-- /wp:image --></p>
+<p><!-- wp:image {"id":612,"sizeSlug":"large","linkDestination":"none"} --></p>
+<figure class="wp-block-image size-large"><img src="{{ site.baseurl }}/assets/2022/12/Untitled-2dasfgh.png.png" alt="" class="wp-image-612" /></figure>
+<p><!-- /wp:image --></p>
+<p><!-- wp:image {"id":608,"sizeSlug":"large","linkDestination":"none"} --></p>
+<figure class="wp-block-image size-large"><img src="{{ site.baseurl }}/assets/2022/12/Untitled-2dfssfgh.png.png" alt="" class="wp-image-608" /></figure>
+<p><!-- /wp:image --></p>
+<p><!-- wp:image {"id":611,"sizeSlug":"large","linkDestination":"none"} --></p>
+<figure class="wp-block-image size-large"><img src="{{ site.baseurl }}/assets/2022/12/Untitled-2fsdghfjk.png.png" alt="" class="wp-image-611" /></figure>
+<p><!-- /wp:image --></p>
+<p><!-- wp:image {"id":614,"sizeSlug":"large","linkDestination":"none"} --></p>
+<figure class="wp-block-image size-large"><img src="{{ site.baseurl }}/assets/2022/12/Untitled-2fsgdhfmvbn.png.png" alt="" class="wp-image-614" /></figure>
+<p><!-- /wp:image --></p>
+<p><!-- wp:image {"id":615,"sizeSlug":"large","linkDestination":"none"} --></p>
+<figure class="wp-block-image size-large"><img src="{{ site.baseurl }}/assets/2022/12/Untitled-2rituyo.png.png" alt="" class="wp-image-615" /></figure>
+<p><!-- /wp:image --></p>
+<p><!-- wp:image {"id":616,"sizeSlug":"large","linkDestination":"none"} --></p>
+<figure class="wp-block-image size-large"><img src="{{ site.baseurl }}/assets/2022/12/Untitled-2sdfgh.png.png" alt="" class="wp-image-616" /></figure>
+<p><!-- /wp:image --></p>
+<p><!-- wp:image {"id":617,"sizeSlug":"large","linkDestination":"none"} --></p>
+<figure class="wp-block-image size-large"><img src="{{ site.baseurl }}/assets/2022/12/Untitled-2trfyguhj.png.png" alt="" class="wp-image-617" /></figure>
+<p><!-- /wp:image --></p>
+<p><!-- wp:image {"id":618,"sizeSlug":"large","linkDestination":"none"} --></p>
+<figure class="wp-block-image size-large"><img src="{{ site.baseurl }}/assets/2022/12/Untitled-3.png.png" alt="" class="wp-image-618" /></figure>
+<p><!-- /wp:image --></p>
+<p><!-- wp:image {"id":619,"sizeSlug":"large","linkDestination":"none"} --></p>
+<figure class="wp-block-image size-large"><img src="{{ site.baseurl }}/assets/2022/12/Untitled-4.png.png" alt="" class="wp-image-619" /></figure>
+<p><!-- /wp:image --></p>
+<p><!-- wp:image {"id":620,"sizeSlug":"large","linkDestination":"none"} --></p>
+<figure class="wp-block-image size-large"><img src="{{ site.baseurl }}/assets/2022/12/Untitled-5.png.png" alt="" class="wp-image-620" /></figure>
+<p><!-- /wp:image --></p>
+<p><!-- wp:image {"id":621,"sizeSlug":"large","linkDestination":"none"} --></p>
+<figure class="wp-block-image size-large"><img src="{{ site.baseurl }}/assets/2022/12/Untitled-21.png.png" alt="" class="wp-image-621" /></figure>
+<p><!-- /wp:image --></p>
+<p><!-- wp:image {"id":622,"sizeSlug":"large","linkDestination":"none"} --></p>
+<figure class="wp-block-image size-large"><img src="{{ site.baseurl }}/assets/2022/12/Untitled-22.png.png" alt="" class="wp-image-622" /></figure>
+<p><!-- /wp:image --></p>
+<p><!-- wp:image {"id":623,"sizeSlug":"large","linkDestination":"none"} --></p>
+<figure class="wp-block-image size-large"><img src="{{ site.baseurl }}/assets/2022/12/Untitled-24.png.png" alt="" class="wp-image-623" /></figure>
+<p><!-- /wp:image --></p>
+<p><!-- wp:image {"id":624,"sizeSlug":"large","linkDestination":"none"} --></p>
+<figure class="wp-block-image size-large"><img src="{{ site.baseurl }}/assets/2022/12/0c830a4ae6d1508f6d7ad82eac09dfb7.jpg.jpg" alt="" class="wp-image-624" /></figure>
+<p><!-- /wp:image --></p>
+<p><!-- wp:image {"id":625,"sizeSlug":"large","linkDestination":"none"} --></p>
+<figure class="wp-block-image size-large"><img src="{{ site.baseurl }}/assets/2022/12/32fabf2b8b2eb256a0e1d6a14a76852f.500x500x1.jpg.jpg" alt="" class="wp-image-625" /></figure>
+<p><!-- /wp:image --></p>
+<p><!-- wp:image {"id":626,"sizeSlug":"large","linkDestination":"none"} --></p>
+<figure class="wp-block-image size-large"><img src="{{ site.baseurl }}/assets/2022/12/500x500-000000-80-0-0.jpg.jpg" alt="" class="wp-image-626" /></figure>
+<p><!-- /wp:image --></p>
+<p><!-- wp:image {"id":627,"sizeSlug":"large","linkDestination":"none"} --></p>
+<figure class="wp-block-image size-large"><img src="{{ site.baseurl }}/assets/2022/12/1100x1900.jpg.jpg" alt="" class="wp-image-627" /></figure>
+<p><!-- /wp:image --></p>
+<p><!-- wp:image {"id":628,"sizeSlug":"large","linkDestination":"none"} --></p>
+<figure class="wp-block-image size-large"><img src="{{ site.baseurl }}/assets/2022/12/583701.png.png" alt="" class="wp-image-628" /></figure>
+<p><!-- /wp:image --></p>
+<p><!-- wp:image {"id":629,"sizeSlug":"large","linkDestination":"none"} --></p>
+<figure class="wp-block-image size-large"><img src="{{ site.baseurl }}/assets/2022/12/HuluWuTangPremiereReception2fe4KvSRzz4x.jpg.jpg" alt="" class="wp-image-629" /></figure>
+<p><!-- /wp:image --></p>
+<p><!-- wp:image {"id":630,"sizeSlug":"large","linkDestination":"none"} --></p>
+<figure class="wp-block-image size-large"><img src="{{ site.baseurl }}/assets/2022/12/images-1.jpeg.jpg" alt="" class="wp-image-630" /></figure>
+<p><!-- /wp:image --></p>
+<p><!-- wp:image {"id":631,"sizeSlug":"large","linkDestination":"none"} --></p>
+<figure class="wp-block-image size-large"><img src="{{ site.baseurl }}/assets/2022/12/MV5BMjg3OGYyZWMtZmU2NS00ODA4LThmZDItOWI2OGM3M2JiNjVlXkEyXkFqcGdeQXVyNjUxMjc1OTM@._V1_.jpg.jpg" alt="" class="wp-image-631" /></figure>
+<p><!-- /wp:image --></figure>
+<p><!-- /wp:gallery --></p>
+<p><!-- wp:paragraph --></p>
+<p>here's the complete set of class images that were generated during the first step of this process.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:video {"id":633} --></p>
+<figure class="wp-block-video"><video autoplay controls loop muted src="https://iksnae.com/wp-content/uploads/2022/12/raekwon-generated-class-images.mov" playsinline></video></figure>
+<p><!-- /wp:video --></p>
+<p><!-- wp:paragraph --></p>
+<p>more updates to come..</p>
+<p><!-- /wp:paragraph --></p>

@@ -1,0 +1,64 @@
+---
+layout: post
+title: swift redux protocols
+date: 2022-12-04 02:22:24.000000000 -08:00
+type: post
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories:
+- Software
+tags:
+- clean-architecture
+- code
+- swift
+meta:
+  _edit_last: '1'
+  _hitmag_layout_meta: th-default-layout
+  _thumbnail_id: '557'
+author:
+  login: user
+  email: user@example.com
+  display_name: user
+  first_name: K
+  last_name: Mills
+permalink: "/2022/12/04/swift-redux-protocols/"
+---
+<p><!-- wp:paragraph --></p>
+<p>here's my simple version of the redux pattern in swift.</p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:paragraph --></p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:code {"lineNumbers":true} --></p>
+<pre title="swift redux protocols" class="wp-block-code"><code lang="swift" class="language-swift line-numbers">import SwiftUI
+
+public protocol ActionType {}
+public protocol StateType {}
+
+public protocol Store&lt;T>:AnyObject, ObservableObject {
+    associatedtype T:StateType
+    func dispatch(_ action:ActionType) async
+    var state:T { get set }
+    var reducer:any Reducer&lt;T> { get set }
+}
+
+public extension Store {
+    @MainActor
+    func dispatch(_ action:ActionType) {
+        self.state = reducer.reduce(action, self.state)
+    }
+}
+
+public protocol Reducer&lt;T> {
+    associatedtype T:StateType
+    func reduce(_ action:ActionType, _ state:T) -> T
+}
+
+public protocol SceneLogic {
+    associatedtype SceneInteractor
+    associatedtype SceneStore:Store
+    var interactor:SceneInteractor { get set }
+    var store: any Store { get }
+}</code></pre>
+<p><!-- /wp:code --></p>
