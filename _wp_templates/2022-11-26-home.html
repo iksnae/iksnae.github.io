@@ -1,0 +1,65 @@
+---
+layout: wp_template
+title: Home
+date: 2022-11-26 03:57:30.000000000 -08:00
+type: wp_template
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories: []
+tags: []
+meta:
+  origin: theme
+author:
+  login: user
+  email: user@example.com
+  display_name: user
+  first_name: K
+  last_name: Mills
+permalink: "/2022/11/26/home/"
+excerpt: Displays posts on the homepage, or on the Posts page if a static homepage
+  is set.
+---
+<p><!-- wp:template-part {"slug":"header","theme":"twentytwentythree","tagName":"header"} /--></p>
+<p><!-- wp:group {"tagName":"main","style":{"spacing":{"margin":{"top":"var:preset|spacing|50","bottom":"var:preset|spacing|70"}}},"layout":{"type":"constrained"}} --><br />
+<main class="wp-block-group" style="margin-top:var(--wp--preset--spacing--50);margin-bottom:var(--wp--preset--spacing--70)"><!-- wp:heading {"level":3,"align":"wide","style":{"spacing":{"margin":{"bottom":"var:preset|spacing|60"}}}} --></p>
+<h3 class="alignwide" style="margin-bottom:var(--wp--preset--spacing--60)">concoctions of a coding artist</h3>
+<p><!-- /wp:heading --></p>
+<p><!-- wp:query {"queryId":0,"query":{"perPage":3,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":true},"displayLayout":{"type":"list","columns":3},"layout":{"type":"constrained"}} --></p>
+<div class="wp-block-query"><!-- wp:post-template {"align":"wide"} --><br />
+<!-- wp:post-featured-image {"isLink":true,"width":"100%","height":"max(15vw, 30vh)","align":"wide"} /--></p>
+<p><!-- wp:post-title {"isLink":true} /--></p>
+<p><!-- wp:post-excerpt /--></p>
+<p><!-- wp:post-date {"isLink":true} /--></p>
+<p><!-- wp:spacer {"height":"var(\u002d\u002dwp\u002d\u002dpreset\u002d\u002dspacing\u002d\u002d40)"} --></p>
+<div style="height:var(--wp--preset--spacing--40)" aria-hidden="true" class="wp-block-spacer"></div>
+<p><!-- /wp:spacer --><br />
+<!-- /wp:post-template --></p>
+<p><!-- wp:query-pagination {"paginationArrow":"arrow","align":"wide","layout":{"type":"flex","justifyContent":"space-between"}} --><br />
+<!-- wp:query-pagination-previous {"label":"Newer Posts"} /--></p>
+<p><!-- wp:query-pagination-next {"label":"Older Posts"} /--><br />
+<!-- /wp:query-pagination --></div>
+<p><!-- /wp:query --></p>
+<p><!-- wp:spacer {"height":"var(\u002d\u002dwp\u002d\u002dpreset\u002d\u002dspacing\u002d\u002d60)"} --></p>
+<div style="height:var(--wp--preset--spacing--60)" aria-hidden="true" class="wp-block-spacer"></div>
+<p><!-- /wp:spacer --></p>
+<p><!-- wp:columns {"align":"wide"} --></p>
+<div class="wp-block-columns alignwide"><!-- wp:column --></p>
+<div class="wp-block-column"><!-- wp:paragraph {"style":{"typography":{"lineHeight":"1.2"}},"fontSize":"x-large"} --></p>
+<p class="has-x-large-font-size" style="line-height:1.2">wanna collab? </p>
+<p><!-- /wp:paragraph --></p>
+<p><!-- wp:buttons --></p>
+<div class="wp-block-buttons"><!-- wp:button {"fontSize":"small"} --></p>
+<div class="wp-block-button has-custom-font-size has-small-font-size"><a class="wp-block-button__link wp-element-button" href="mailto:mustkre8@gmail.com" target="_blank" rel="noreferrer noopener"> hit me up </a></div>
+<p><!-- /wp:button --></div>
+<p><!-- /wp:buttons --></div>
+<p><!-- /wp:column --></p>
+<p><!-- wp:column --></p>
+<div class="wp-block-column"><!-- wp:separator --></p>
+<hr class="wp-block-separator has-alpha-channel-opacity" />
+<!-- /wp:separator --></div>
+<p><!-- /wp:column --></div>
+<p><!-- /wp:columns --></main><br />
+<!-- /wp:group --></p>
+<p><!-- wp:template-part {"slug":"footer","theme":"twentytwentythree","tagName":"footer"} /--></p>
